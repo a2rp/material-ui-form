@@ -1,14 +1,33 @@
-![Screenshot 2024-04-15 134921](https://github.com/a2rp/material-ui-form/assets/5670738/7f4c0950-e1ca-4fb4-a1c9-6c4317cd5970)
+# Material UI Form
 
+A responsive React form demo built with Material UI. It demonstrates practical field validation, grouped inputs, resume upload handling, and a safe confirmation dialog.
 
-# React + Vite
+![Material UI Form preview](screenshot.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- Responsive Material UI layout with a fixed header and mobile navigation
+- Validation for identity, contact, password, and portfolio fields
+- Radio buttons, checkboxes, grouped select options, and local file selection
+- Confirmation dialog with a privacy-safe submission summary
+- Toast feedback, accessible labels, local project assets, and a go-to-top control
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech stack
+
+React, Vite, Material UI, Sass, React Icons, and React Toastify.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+The app is deployed to GitHub Pages: [material-ui-form](https://a2rp.github.io/material-ui-form/)
+
+Future improvements can include server-side submission, persistent drafts, and stronger schema-based validation while keeping the current form flow intact.
 
 ## Links
 
@@ -23,24 +42,5 @@ Currently, two official plugins are available:
 ## Support
 
 - Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
-<!-- Project links -->
-
-## Links
-
-- Live: [https://a2rp.github.io/material-ui-form/](https://a2rp.github.io/material-ui-form/)
-- Repository: [https://github.com/a2rp/material-ui-form](https://github.com/a2rp/material-ui-form)
-- Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
-
-## Support
-
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
 - Buy Me a Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://www.patreon.com/a2rp](https://www.patreon.com/a2rp)
+- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)

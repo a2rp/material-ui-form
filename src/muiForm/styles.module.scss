@@ -1,81 +1,254 @@
-.container {
-    // border: 1px solid #f00;
-    padding: 30px;
+﻿.container {
+  background: #f5f7fb;
+  padding: clamp(3.5rem, 8vw, 7rem) clamp(1rem, 4vw, 2rem) 0;
+}
 
-    .heading {
-        font-size: 20px;
-        font-weight: 900;
-    }
+.main {
+  margin: 0 auto;
+  max-width: 1180px;
+}
 
-    .form {
-        margin-top: 30px;
-        // max-width: 300px;
+.hero {
+  align-items: center;
+  display: grid;
+  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr);
+}
 
-        .section1 {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+.eyebrow {
+  color: #3459b8;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.85rem;
+  text-transform: uppercase;
+}
 
-            .textField {
-                min-width: 300px;
-            }
-        }
+.hero h1 {
+  color: #1b2745;
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+  margin: 0 0 1.4rem;
+  max-width: 690px;
+}
 
-        .section2 {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
+.intro {
+  color: #65728c;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.75;
+  margin: 0;
+  max-width: 620px;
+}
 
-        .section3 {
-            margin-top: 30px;
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
+.heroImage {
+  background: #ffffff;
+  border: 1px solid #dce4f2;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(32, 55, 104, 0.12);
+  overflow: hidden;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
 
-            .selectResumeContainer {
-                // border: 1px solid #aaa;
-                // padding: 5px;
-                // display: flex;
-                // gap: 5px;
-                // align-items: center;
-                // cursor: pointer;
+.heroImage:hover {
+  border-color: #3459b8;
+  box-shadow: 0 24px 56px rgba(52, 89, 184, 0.16);
+}
 
-                .resumeButton {
-                    // opacity: 0;
-                }
+.heroImage img {
+  display: block;
+  height: 310px;
+  object-fit: cover;
+  width: 100%;
+}
 
-                .resumeInputFile {
-                    // position: absolute;
-                    // height: 0;
-                    // overflow: hidden;
-                    // opacity: 0;
-                }
-            }
+.formCard {
+  background: #ffffff;
+  border: 1px solid #dce4f2;
+  border-radius: 22px;
+  box-shadow: 0 16px 38px rgba(32, 55, 104, 0.08);
+  margin-top: clamp(4rem, 9vw, 7rem);
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
 
-            .programmingLanguage {
-                // border: 1px solid #f00;
-                min-width: 300px;
+.cardHeading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
 
-                .languageTypography {
-                    .language {
-                        font-style: italic;
-                    }
-                }
-            }
-        }
+.cardHeading h2 {
+  color: #1b2745;
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
+  margin: 0;
+}
 
-        .submitButton {
-            height: 40px;
-            overflow: hidden;
-        }
-    }
+.cardHeading > svg {
+  color: #3459b8;
+  font-size: 1.7rem;
+}
 
-    .dialogContent {
-        .detail {
-            display: block;
-            // border: 1px solid #f00;
-        }
-    }
+.form {
+  margin-top: 1.8rem;
+}
+
+.section1 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.textField,
+.fileField,
+.languageField {
+  min-width: 0;
+}
+
+.textField :global(.MuiOutlinedInput-root),
+.fileField :global(.MuiOutlinedInput-root),
+.languageField :global(.MuiOutlinedInput-root) {
+  border-radius: 12px;
+}
+
+.textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline),
+.fileField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline),
+.languageField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: #3459b8;
+}
+
+.textField :global(.Mui-focused .MuiOutlinedInput-notchedOutline),
+.fileField :global(.Mui-focused .MuiOutlinedInput-notchedOutline),
+.languageField :global(.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: #3459b8;
+}
+
+.textField :global(.MuiInputLabel-root.Mui-focused),
+.fileField :global(.MuiInputLabel-root.Mui-focused),
+.languageField :global(.MuiInputLabel-root.Mui-focused) {
+  color: #3459b8;
+}
+
+.section2 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.choiceCard {
+  background: #f8faff;
+  border: 1px solid #e0e7f3;
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+
+.choiceCard :global(.MuiFormLabel-root) {
+  color: #1b2745;
+  font-weight: 700;
+}
+
+.section3 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.6fr);
+  margin-top: 1.5rem;
+}
+
+.submitButton {
+  background: #3459b8 !important;
+  border-radius: 12px !important;
+  margin-top: 1.7rem !important;
+  min-height: 48px;
+  padding: 0.7rem 1.2rem !important;
+  text-transform: none !important;
+  transition: box-shadow 180ms ease, text-shadow 180ms ease !important;
+}
+
+.submitButton:hover {
+  box-shadow: 0 12px 22px rgba(52, 89, 184, 0.24) !important;
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.35);
+}
+
+.dialogTitle {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialogContent {
+  padding-top: 0 !important;
+}
+
+.dialogIntro {
+  color: #65728c;
+  margin: 0 0 1rem;
+}
+
+.detailGrid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detailGrid > div {
+  background: #f8faff;
+  border: 1px solid #e0e7f3;
+  border-radius: 10px;
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+  padding: 0.75rem;
+}
+
+.detailGrid strong {
+  color: #1b2745;
+  font-size: 0.8rem;
+}
+
+.detailGrid span {
+  color: #65728c;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 840px) {
+  .hero,
+  .section1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroCopy {
+    grid-column: 1 / -1;
+  }
+
+  .heroImage {
+    grid-column: 1 / -1;
+  }
+
+  .heroImage img {
+    height: 240px;
+  }
+
+  .section1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .section1,
+  .section2,
+  .section3,
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroImage img {
+    height: 220px;
+  }
+
+  .choiceCard :global(.MuiFormGroup-root),
+  .choiceCard :global(.MuiRadioGroup-root) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
