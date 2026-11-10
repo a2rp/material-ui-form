@@ -11,15 +11,20 @@ A responsive React form demo built with Material UI. It demonstrates practical f
 - Radio buttons, checkboxes, grouped select options, and local file selection
 - Confirmation dialog with a privacy-safe submission summary
 - Toast feedback, accessible labels, local project assets, and a go-to-top control
+- Subject selection requires at least one choice
 
 ## Tech stack
 
 React, Vite, Material UI, Sass, React Icons, and React Toastify.
 
+## Privacy and submission
+
+This is a frontend-only demo. Form entries stay in the current browser session and are shown in a confirmation dialog; nothing is sent to a server. The selected resume is not uploaded, and only its file name appears in the summary.
+
 ## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 

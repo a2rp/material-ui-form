@@ -9,6 +9,7 @@ import {
   DialogTitle,
   FormControl,
   FormControlLabel,
+  FormHelperText,
   FormGroup,
   FormLabel,
   IconButton,
@@ -42,6 +43,7 @@ const MuiForm = () => {
   const [resumeFileName, setResumeFileName] = useState("");
   const [gender, setGender] = useState("male");
   const [subject, setSubject] = useState({ english: true, maths: false, physics: false });
+  const [subjectError, setSubjectError] = useState("");
   const [programmingLanguage, setProgrammingLanguage] = useState("react");
   const [open, setOpen] = useState(false);
 
@@ -95,6 +97,7 @@ const MuiForm = () => {
 
   const handleSubjectChange = (event) => {
     setSubject((currentSubject) => ({ ...currentSubject, [event.target.name]: event.target.checked }));
+    if (event.target.checked) setSubjectError("");
   };
 
   const handleResumeChange = (event) => {
@@ -115,6 +118,13 @@ const MuiForm = () => {
 
     if (!fullName || !email || !userName || !password || !phoneNumber || !url || !resumeFileName) {
       toast.error("Please complete every required field.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!Object.values(subject).some(Boolean)) {
+      setSubjectError("Choose at least one subject.");
+      toast.error("Choose at least one subject.");
       setIsLoading(false);
       return;
     }
@@ -163,13 +173,14 @@ const MuiForm = () => {
                 </RadioGroup>
               </FormControl>
 
-              <FormControl className={styles.choiceCard} required component="fieldset" variant="standard">
+              <FormControl className={styles.choiceCard} required error={Boolean(subjectError)} component="fieldset" variant="standard">
                 <FormLabel component="legend">Subjects</FormLabel>
                 <FormGroup row>
                   <FormControlLabel control={<Checkbox checked={subject.english} onChange={handleSubjectChange} name="english" />} label="English" />
                   <FormControlLabel control={<Checkbox checked={subject.maths} onChange={handleSubjectChange} name="maths" />} label="Maths" />
                   <FormControlLabel control={<Checkbox checked={subject.physics} onChange={handleSubjectChange} name="physics" />} label="Physics" />
                 </FormGroup>
+                {subjectError && <FormHelperText>{subjectError}</FormHelperText>}
               </FormControl>
             </div>
 
@@ -191,6 +202,7 @@ const MuiForm = () => {
             <Button variant="contained" type="submit" disabled={isLoading} className={styles.submitButton} startIcon={isLoading ? <CircularProgress size={18} color="inherit" /> : <CheckCircleOutlineIcon />}>
               {isLoading ? "Checking details" : "Review form"}
             </Button>
+            <p className={styles.privacyNote}>This demo keeps entries in this browser only. It shows the selected resume file name; it does not upload the file or send the form.</p>
           </form>
         </div>
 
